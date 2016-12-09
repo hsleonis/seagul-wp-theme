@@ -88,7 +88,8 @@ class TmxLibraryIncluder{
             'menu_icon' => 'dashicons-businessman'
         ));
         new TmxCustomPost('Portfolio', array(
-            'taxonomies' => array( ),
+            'taxonomies' => array( 'post_tag' ),
+            'supports'  => array( 'title', 'editor', 'thumbnail' ),
             'menu_icon' => 'dashicons-portfolio'
         ));
         new TmxSidebar( 3, array(

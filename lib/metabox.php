@@ -94,6 +94,17 @@ class TmxMetaBoxTitan
             'type' => 'text',
             'desc' => 'Instagram link'
         ));
+
+        $portfolio = $titan->createMetaBox( array(
+            'name' => 'Portfolio Banner',
+            'post_type' => 'portfolio',
+        ) );
+        $portfolio->createOption(array(
+            'name' => 'Page banner',
+            'id' => 'portfolio_banner_img',
+            'type' => 'upload',
+            'desc' => 'Portfolio page banner image'
+        ));
     }
 
     /**

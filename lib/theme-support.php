@@ -39,6 +39,7 @@ class TmxThemeSupport{
 
         // Custom image sizes
         add_image_size( 'team-image', 400, 500, array( 'center', 'center' ) );
+        add_image_size( 'portfolio-image', 400, 400, array( 'center', 'center' ) );
 
         // Add theme support for Custom Background
         $background_args = array(

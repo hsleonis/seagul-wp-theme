@@ -47,9 +47,9 @@
                 <div class="collapse navbar-collapse" id="mobile-menu">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.php">HOME <span class="sr-only">(current)</span></a></li>
-                        <li><a href="work.php">WORK</a></li>
+                        <li><a href="page-portfolio.php">WORK</a></li>
                         <li><a href="page-team.php">ABOUT</a></li>
-                        <li><a href="connect.php">CONNECT</a></li>
+                        <li><a href="page-connect.php">CONNECT</a></li>
                         <li><a href="intern.php">INTERNS</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
