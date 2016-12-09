@@ -1,7 +1,7 @@
 <?php
 /**
- * Template name: Full Window
- * Seagul Theme Index
+ * Template name: Connect
+ * Seagul Theme Connect page
  *
  * @package     TMXSeagul
  * @author      Md. Hasan Shahriar <info@themeaxe.com>
@@ -12,13 +12,15 @@
 get_header();
 
 while (have_posts()):the_post();
+
+    get_template_part('templates/section','parallax');
 ?>
         <!--about text section one-->
         <section class="contact-section">
             <div  class="container section-container">
                 <div class="row text-box">
                     <div class="col-xs-12">
-                        <h1 class="page-title">Click, call or stop on by</h1>
+                        <h1 class="page-title"><?php echo TmxLibraryIncluder::getAdmin()->getOption('contact_title'); ?></h1>
                     </div>
                 </div>
                 <div class="row contact-info">
@@ -27,7 +29,7 @@ while (have_posts()):the_post();
                             <h2>email</h2>
                         </div>
                         <div class="contact-address">
-                            <a href="mailto:allison@intersection.is">ALLISON@intersection.is</a>
+                            <a href="mailto:<?php echo TmxLibraryIncluder::getAdmin()->getOption('contact_email'); ?>"><?php echo TmxLibraryIncluder::getAdmin()->getOption('contact_email'); ?></a>
                         </div>
                     </div>
                     <div class="col-xs-6 col-mobile-12 bottom-margin">
@@ -35,7 +37,7 @@ while (have_posts()):the_post();
                             <h2>ring</h2>
                         </div>
                         <div class="contact-address">
-                            <a href="#">765.749.3156</a>
+                            <a href="tel:<?php echo TmxLibraryIncluder::getAdmin()->getOption('contact_mobile'); ?>"><?php echo TmxLibraryIncluder::getAdmin()->getOption('contact_mobile'); ?></a>
                         </div>
                     </div>
                     <div class="col-xs-6 col-mobile-12">
@@ -43,8 +45,9 @@ while (have_posts()):the_post();
                             <h2>walk</h2>
                         </div>
                         <div class="contact-address">
-                            <a href="#">301 S. Walnut St. | Suite 101
-                                Muncie, IN 47305</a>
+                            <a href="https://www.google.com.bd/maps/place/<?php echo urlencode(TmxLibraryIncluder::getAdmin()->getOption('contact_address')); ?>?hl=en" target="_blank">
+                                <?php echo TmxLibraryIncluder::getAdmin()->getOption('contact_address'); ?>
+                            </a>
                         </div>
                     </div>
                     <div class="col-xs-6 col-mobile-12">
@@ -52,10 +55,10 @@ while (have_posts()):the_post();
                             <h2>social</h2>
                         </div>
                         <div class="contact-address">
-                            <div class="icon"><a href="#"><span class="fa fa-facebook"></span></a></div>
-                            <div class="icon"><a href="#"><span class="fa fa-twitter"></span></a></div>
-                            <div class="icon"><a href="#"><span class="fa fa-instagram"></span></a></div>
-                            <div class="icon"><a href="#"><span class="fa fa-envelope-o"></span></a></div>
+                            <div class="icon"><a href="<?php echo TmxLibraryIncluder::getAdmin()->getOption('contact_fb'); ?>"><span class="fa fa-facebook"></span></a></div>
+                            <div class="icon"><a href="<?php echo TmxLibraryIncluder::getAdmin()->getOption('contact_tw'); ?>"><span class="fa fa-twitter"></span></a></div>
+                            <div class="icon"><a href="<?php echo TmxLibraryIncluder::getAdmin()->getOption('contact_in'); ?>"><span class="fa fa-instagram"></span></a></div>
+                            <div class="icon"><a href="mailto:<?php echo TmxLibraryIncluder::getAdmin()->getOption('contact_email'); ?>"><span class="fa fa-envelope-o"></span></a></div>
                         </div>
                     </div>
                 </div>

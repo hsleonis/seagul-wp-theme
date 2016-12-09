@@ -60,6 +60,7 @@ class TmxLibraryIncluder{
         require_once ( get_template_directory().'/lib/custom-post.php');
         require_once ( get_template_directory().'/lib/theme-support.php');
         require_once ( get_template_directory().'/lib/wp_bootstrap_navwalker.php');
+        require_once ( get_template_directory().'/lib/settings.php');
         require_once ( get_template_directory().'/lib/sidebar.php');
         require_once ( get_template_directory().'/lib/shortcode.php');
         require_once ( get_template_directory().'/lib/tinymce.php');
@@ -75,6 +76,7 @@ class TmxLibraryIncluder{
         new TmxEnqueue();
         new TmxCustomizerTitan(self::$admin);
         new TmxMetaBoxTitan(self::$admin);
+        new TmxSettingsTitan(self::$admin);
         new TmxThemeSupport();
         new wp_bootstrap_navwalker();
         new TmxShortcode();

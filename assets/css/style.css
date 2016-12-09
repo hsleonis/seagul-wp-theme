@@ -6,6 +6,7 @@
 2. Home / Navigation
 3. Parallax / Section-css
 4. Recent-works + Team-member
+5. Contact
 
 ==========================================================================*/
 
@@ -203,7 +204,7 @@ body{
     color: #01b4aa;
 }
 .right-border {
-    border-right: 3px solid;
+    border-right: 3px solid #333333;
     padding-right: 50px;
     max-width: 195px;
 }
@@ -226,6 +227,10 @@ body{
     padding-top: 15px;
 }
 
+/*=========================================
+|                CONTACT                  |
+===========================================*/
+
 .page-description a:hover,
 .page-description a:focus,
 .member-name a:hover,
@@ -241,3 +246,7 @@ body{
     color: #fff;
 }
 
+.contact-address ul {
+    list-style: inside none;
+    padding: 0;
+}
