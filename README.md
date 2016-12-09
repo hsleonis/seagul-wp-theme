@@ -1,0 +1,1 @@
+# seagul-wp-theme
