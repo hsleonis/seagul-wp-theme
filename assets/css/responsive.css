@@ -1,0 +1,73 @@
+/* Start of Responsive Media Query*/
+/*===============================================================
+ ================(max-width:500px)==========================*/
+/* Mobile phones and down */
+@media all and (max-width:500px){
+    .col-mobile-12{
+        width: 100%;
+    }
+    .col-mobile-6{
+        width: 50%;
+    }
+    .navbar-brand .logo {
+        max-width: 230px!important;
+    }
+    .header-parallax{
+        margin-bottom: 15px;
+    }
+    .section-padding {
+        padding: 15px 0;
+    }
+    .portfolio-block img {
+        margin: 0 auto;
+    }
+    .page-description h2{
+        padding-top: 15px;
+    }
+    .contact-info > div {
+        margin-bottom: 25px;
+    }
+    .portfolio-block img{
+        width: 100%;
+    }
+
+    }/* Mobile phones and down */
+/*===============================================================
+====================(max-width:768px)===========================*/
+/* Landscape phones and down */
+@media screen and (max-width:768px){
+
+    .navbar-brand .logo {
+        max-width: 300px;
+    }
+
+
+}/* Landscape phones and down */
+/*==============================================================*/
+/*==============================================================*/
+/* Landscape phone to portrait tablet*/
+@media (min-width:768px) and (max-width:992px){
+
+    .navbar-brand .logo {
+        max-width: 300px;
+    }
+
+}/* Landscape phone to portrait tablet */
+/*==============================================================*/
+/*==============================================================*/
+/* Portrait tablet to landscape and desktop */
+@media(min-width:992px) and (max-width:1200px){
+
+
+
+
+}/* Portrait tablet to landscape and desktop */
+/*==============================================================*/
+/*==============================================================*/
+/* Large desktop */
+@media (min-width: 1200px) {
+
+
+}/* Large desktop */
+/*==============================================================*/
+

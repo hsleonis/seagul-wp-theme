@@ -1,0 +1,243 @@
+/*=======================================================================
+[Table of contents]
+=========================================================================
+
+1. Typography
+2. Home / Navigation
+3. Parallax / Section-css
+4. Recent-works + Team-member
+
+==========================================================================*/
+
+/*=========================================
+|               Typography                 |
+===========================================*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.page-description h2,
+.member-name, .contact-type{
+    font-family: 'Arapey', serif;
+    font-style: italic;
+}
+
+.contact-address h4{
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: bold;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+.page-description p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.member-name a{
+    font-size: 28px;
+}
+
+.member-name a, .page-description a, .contact-address a{
+    color: #01b4aa;
+}
+
+.member-position, .page-description a, .contact-address a {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.member-position, .page-description a, .contact-address a,
+.page-title{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.page-title {
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+.icon a span {
+    height: 30px;
+    width: 30px;
+    border: 2px solid #333;
+    float: left;
+    margin-right: 10px;
+    color: #333;
+    text-align: center;
+    padding-left: 2px;
+    line-height: 26px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+
+/*=========================================
+|            Home / Navigation             |
+===========================================*/
+.navbar-brand .logo {
+    max-height: 80px;
+    max-width: 400px;
+}
+.menubar {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-top: 15px;
+    z-index: 9;
+}
+.nav.navbar-nav.navbar-right {
+    padding-top: 15px;
+}
+
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover,
+ .navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a{
+    color: #b1f1de;
+    background-color: transparent;
+}
+
+.middle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #DCE1E3;
+    font-weight: 700;
+    max-width: 300px;
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 3px;
+    line-height: 48px;
+}
+
+.bg-image{
+    height: 100vh;
+}
+
+/*=========================================
+|         Parallax / Section-css           |
+===========================================*/
+.bg-image, .bg-parallax{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #DCE1E3;
+}
+
+.bg-parallax{
+    background-attachment: fixed;
+    min-height: 390px;
+}
+
+.header-parallax{
+    margin-bottom: 50px;
+}
+
+.section-padding {
+    padding: 50px 0;
+}
+
+.section-container{
+    max-width: 960px;
+}
+
+/*=========================================
+|       Recent-works + Team-member         |
+===========================================*/
+
+.portfolio-block {
+    margin-bottom: 30px;
+}
+.portfolio-block img{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+.portfolio-block:hover img{
+    filter: none;
+}
+
+.bottom-margin {
+    margin-bottom: 50px;
+}
+.portfolio-block figure{
+    position: relative;
+}
+.portfolio-block figure::before {
+    content: '\f00e';
+    font-family: 'FontAwesome';
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    z-index: 9;
+    font-size: 28px;
+    color: #ccc;
+}
+
+.portfolio-block figure::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 80px solid #fff;
+    border-left: 80px solid transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.portfolio-block:hover figure::before{
+    color: #01b4aa;
+}
+.right-border {
+    border-right: 3px solid;
+    padding-right: 50px;
+    max-width: 195px;
+}
+.left-padding{
+    padding-left: 50px;
+}
+.page-title {
+    margin-bottom: 30px;
+}
+
+.page-description h2{
+    margin-top: 0;
+}
+
+.page-description h2{
+    margin-bottom: 20px;
+}
+
+.member-name {
+    padding-top: 15px;
+}
+
+.page-description a:hover,
+.page-description a:focus,
+.member-name a:hover,
+.member-name a:focus,
+.contact-address a:hover,
+.contact-address a:focus{
+    text-decoration: none;
+    color: rgba(1,180,170,.7);
+}
+
+.icon a span:hover{
+    background-color: #333;
+    color: #fff;
+}
+
