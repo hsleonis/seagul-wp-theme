@@ -33,7 +33,7 @@ class TmxShortcode
         ?>
         <section class="section-parallax section-padding">
             <div class="container-fluid">
-                <div class="row bg-parallax" style="background-image: url('<?php echo $a['src']; ?>')">
+                <div class="row bg-parallax" style="background-image: url('<?php echo wp_get_attachment_url($a['src']); ?>')">
                 </div>
             </div>
         </section>
@@ -50,6 +50,8 @@ class TmxShortcode
         $a = shortcode_atts( array(
             'title' => '',
             'right' => '',
+            'desc' => '',
+            'onecol' => false
         ), $atts );
 
         ob_start();
@@ -61,12 +63,14 @@ class TmxShortcode
                         <h1 class="page-title"><?php echo $a['title']; ?></h1>
                     </div>
                     <div class="page-description">
-                        <div class="col-sm-7">
-                            <?php echo do_shortcode($content); ?>
+                        <div class="<?php echo ($a['onecol'])?'col-sm-12':'col-sm-7'; ?>">
+                            <p><?php echo $a['desc']; ?></p>
                         </div>
+                        <?php if(!$a['onecol']): ?>
                         <div class="col-sm-5">
                             <h2><?php echo $a['right']; ?></h2>
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

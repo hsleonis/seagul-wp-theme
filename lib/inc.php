@@ -1,6 +1,6 @@
 <?php
 /**
- * FilmMaker Theme library includer
+ * Seagul Theme library includer
  * Includes all necessary library files
  *
  * @package     TMXSeagul
@@ -62,8 +62,11 @@ class TmxLibraryIncluder{
         require_once ( get_template_directory().'/lib/wp_bootstrap_navwalker.php');
         require_once ( get_template_directory().'/lib/settings.php');
         require_once ( get_template_directory().'/lib/sidebar.php');
+        require_once ( get_template_directory().'/lib/shortcode-ui/shortcode-ui.php');
         require_once ( get_template_directory().'/lib/shortcode.php');
-        require_once ( get_template_directory().'/lib/tinymce.php');
+        require_once ( get_template_directory().'/lib/shortcode-ui.php');
+        //require_once ( get_template_directory().'/lib/tinymce.php');
+        require_once ( get_template_directory().'/lib/tgm-plugin.php');
     }
 
     /**
@@ -80,7 +83,7 @@ class TmxLibraryIncluder{
         new TmxThemeSupport();
         new wp_bootstrap_navwalker();
         new TmxShortcode();
-        new TmxTinyMCE();
+        //new TmxTinyMCE();
         new TmxMenu(array(
             'main-menu' => __( 'Main menu', 'themeaxe' ),
         ));
@@ -113,6 +116,16 @@ class TmxLibraryIncluder{
      */
     public function getAdmin(){
         return TitanFramework::getInstance(self::$admin);
+    }
+
+    /**
+     * @access public
+     * @return admin instance
+     *
+     * @since 1.0.1
+     */
+    public function getAdminOption($option){
+        return self::getAdmin()->getOption($option);
     }
 
     /**

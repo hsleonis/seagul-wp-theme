@@ -33,9 +33,14 @@ function addslashes( str ) {
                         name: 'right',
                         label: 'Right column text',
                         placeholder: 'Right italic text'
+                    },
+                    {
+                        type: 'checkbox',
+                        name: 'onecol',
+                        label: 'Show only description',
                     }],
                     onsubmit: function( e ) {
-                        editor.insertContent( '[text_box title="' + e.data.title + '" right="' + addslashes(e.data.right) + '"]'+ e.data.desc + '[/text_box]');
+                        editor.insertContent( '[text_box title="' + e.data.title + '" right="' + addslashes(e.data.right) + '" onecol="' + e.data.onecol + '"]'+ e.data.desc + '[/text_box]');
                     }
                 });
                 console.log(top.tinymce.activeEditor.windowManager.getParams());

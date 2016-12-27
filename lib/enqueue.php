@@ -60,6 +60,19 @@ class TmxEnqueue{
     }
 
     /**
+     * Enqueues style to TinyMCE
+     *
+     * @since 1.0.1
+     */
+    public function tmx_editor_styles() {
+        add_editor_style( get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
+        add_editor_style( get_template_directory_uri() . '/assets/css/style.css' );
+        add_editor_style( 'https://fonts.googleapis.com/css?family=Arapey:400i|Roboto:400,700' );
+        add_editor_style( get_template_directory_uri() . '/assets/css/editor-style.css' );
+    }
+
+
+    /**
      * Attach hooks
      *
      * @since 1.0.1
@@ -68,5 +81,6 @@ class TmxEnqueue{
         add_action( 'wp_enqueue_scripts', array($this, 'tmx_enqueue_scripts') );
         add_action( 'admin_enqueue_scripts', array($this, 'tmx_admin_scripts') );
         add_action( 'login_enqueue_scripts', array($this, 'tmx_login_scripts') );
+        add_action( 'admin_init', array($this, 'tmx_editor_styles') );
     }
 }

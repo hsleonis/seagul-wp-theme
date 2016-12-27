@@ -1,0 +1,23 @@
+/***********************************************
+ * ShortCodes
+ * Theme: Seagul
+ * Author: Md. Hasan Shahriar
+ * (c)2016, http://themeaxe.com
+ ************************************************/
+.bg-parallax{
+	background-attachment: scroll;
+}
+.wpview{
+	width: auto;
+	max-width: 98%;
+	margin: 15px auto;
+	border: 2px dashed #E1E1E1;
+	background-color: #FCFCFC;
+	border-radius: 5px;
+}
+.wpview:hover{
+	background-color: #F5F5F5;
+}
+.mce-content-body [contentEditable="false"]{
+	cursor: move;
+}
