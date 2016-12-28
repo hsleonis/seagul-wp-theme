@@ -50,7 +50,6 @@ class TmxShortcode
         $a = shortcode_atts( array(
             'title' => '',
             'right' => '',
-            'desc' => '',
             'onecol' => false
         ), $atts );
 
@@ -64,7 +63,7 @@ class TmxShortcode
                     </div>
                     <div class="page-description">
                         <div class="<?php echo ($a['onecol'])?'col-sm-12':'col-sm-7'; ?>">
-                            <p><?php echo $a['desc']; ?></p>
+                            <p><?php echo do_shortcode($content); ?></p>
                         </div>
                         <?php if(!$a['onecol']): ?>
                         <div class="col-sm-5">

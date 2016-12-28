@@ -26,21 +26,21 @@ shortcode_ui_register_for_shortcode(
 shortcode_ui_register_for_shortcode(
     'text_box',
     array(
-        'label' => 'Text Box',
+        'label'         => 'Text Box',
         'listItemImage' => "<img src='".get_template_directory_uri()."/assets/images/text-box.png' />", //'dashicons-file',
-        'attrs'          => array(
+        'attrs'         => array(
             array(
                 'label'        => 'Title',
                 'attr'         => 'title',
                 'type'         => 'text',
                 'description'  => 'Box title',
             ),
-            array(
+            /*array(
                 'label'        => 'Content',
                 'attr'         => 'desc',
                 'type'         => 'textarea',
                 'description'  => 'Description',
-            ),
+            ),*/
             array(
                 'label'        => 'Right Column',
                 'attr'         => 'right',
@@ -53,6 +53,9 @@ shortcode_ui_register_for_shortcode(
                 'type'         => 'checkbox',
                 'description'  => 'Select to hide right column',
             ),
+        ),
+        'inner_content' => array(
+                'label'        => 'Content',
         ),
     )
 );
