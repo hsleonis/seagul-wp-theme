@@ -34,7 +34,7 @@
         margin-top: 30px;
     }
 
-    }/* Mobile phones and down */
+}/* Mobile phones and down */
 /*===============================================================
 ====================(max-width:768px)===========================*/
 /* Landscape phones and down */
@@ -42,8 +42,22 @@
 
     .navbar-brand .logo {
         max-width: 300px;
+        max-height: 50px;
     }
 
+    .bg-parallax {
+        background-attachment: scroll;
+    }
+
+    #mobile-menu {
+        background: rgba(0,0,0,0.95);
+    }
+    .nav.navbar-nav.navbar-right {
+        padding-top: 0;
+    }
+    .navbar-brand {
+        margin-bottom: 15px;
+    }
 
 }/* Landscape phones and down */
 /*==============================================================*/
@@ -53,8 +67,11 @@
 
     .navbar-brand .logo {
         max-width: 300px;
+        max-height: 50px;
     }
-
+    #menu-main-menu.nav > li > a {
+        padding: 10px 8px;
+    }
 }/* Landscape phone to portrait tablet */
 /*==============================================================*/
 /*==============================================================*/

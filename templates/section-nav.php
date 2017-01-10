@@ -9,7 +9,7 @@
 ?>
 
 <!--navigation section-->
-<nav class="navbar navbar-default menubar">
+<nav class="navbar navbar-default navbar-fixed-top menubar">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
